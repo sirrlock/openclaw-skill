@@ -1,0 +1,49 @@
+{
+  "name": "@sirrlock/openclaw-skill",
+  "version": "1.0.0",
+  "description": "OpenClaw workspace skill for Sirr — ephemeral secret management",
+  "keywords": [
+    "openclaw",
+    "skill",
+    "sirr",
+    "secrets",
+    "ephemeral"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Sirr Security Inc.",
+    "email": "oss@sirrlock.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sirrlock/openclaw-skill.git"
+  },
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "skill.json"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "jest",
+    "test:integration": "jest --testPathPatterns=integration --testTimeout=30000",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "devDependencies": {
+    "@jest/globals": "^30.2.0",
+    "@types/node": "^25.3.3",
+    "jest": "^30.2.0",
+    "ts-jest": "^29.4.6",
+    "typescript": "^5.4.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.tsx?$": ["ts-jest", { "tsconfig": "tsconfig.test.json" }]
+    },
+    "testPathIgnorePatterns": ["/node_modules/", "/dist/"]
+  }
+}

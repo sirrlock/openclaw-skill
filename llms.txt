@@ -1,0 +1,31 @@
+# @sirrlock/openclaw-skill — Sirr OpenClaw Skill
+
+OpenClaw workspace skill for the Sirr ephemeral secret vault.
+Wraps the full Sirr REST API (24 operations) as callable functions,
+triggered by natural language keywords.
+
+## Install
+
+Add to OpenClaw workspace — configure SIRR_SERVER, SIRR_TOKEN, and optionally SIRR_ORG
+in the skill config.
+
+## Operations
+
+Secrets: getSecret, pushSecret, listSecrets, patchSecret, deleteSecret, pruneSecrets
+Audit: queryAudit
+Webhooks: createWebhook, listWebhooks, deleteWebhook
+Keys: createKey, deleteKey
+Me: getMe, patchMe
+Orgs: createOrg, listOrgs, deleteOrg
+Principals: createPrincipal, listPrincipals, deletePrincipal
+Roles: createRole, listRoles, deleteRole
+Server: healthCheck
+
+## Org Mode
+
+When config.org is set, all secret/audit/webhook/prune operations are automatically
+routed to /orgs/{org_id}/... equivalents.
+
+## Source
+
+github.com/sirrlock/openclaw

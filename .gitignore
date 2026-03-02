@@ -1,0 +1,13 @@
+node_modules/
+dist/
+
+# IDE
+.idea/
+
+# macOS
+.DS_Store
+
+# Local dev
+.claude/
+.worktrees/
+.playwright-mcp/

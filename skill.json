@@ -1,0 +1,34 @@
+{
+  "name": "sirr",
+  "displayName": "Sirr Secret Manager",
+  "description": "Manage ephemeral secrets with Sirr — push, retrieve, and audit secrets through natural language.",
+  "version": "0.1.0",
+  "triggers": {
+    "keywords": [
+      "secret",
+      "sirr",
+      "credential",
+      "burn after read",
+      "ephemeral",
+      "api key",
+      "vault"
+    ]
+  },
+  "config": {
+    "serverUrl": {
+      "type": "string",
+      "description": "Base URL of your Sirr server",
+      "default": "http://localhost:39999"
+    },
+    "token": {
+      "type": "string",
+      "description": "Bearer token (master key or scoped API key)",
+      "secret": true
+    },
+    "org": {
+      "type": "string",
+      "description": "Organization slug for multi-tenant mode (optional)",
+      "required": false
+    }
+  }
+}
