@@ -18,7 +18,7 @@
     "serverUrl": {
       "type": "string",
       "description": "Base URL of your Sirr server",
-      "default": "http://localhost:39999"
+      "default": "https://sirr.sirrlock.com"
     },
     "token": {
       "type": "string",
