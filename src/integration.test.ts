@@ -8,7 +8,7 @@
  *   SIRR_EXTERNAL=1 npm run test:integration
  *
  * Or against an existing server:
- *   SIRR_EXTERNAL=1 SIRR_SERVER=http://localhost:39999 SIRR_API_KEY=<key> npm run test:integration
+ *   SIRR_EXTERNAL=1 SIRR_SERVER=http://localhost:39999 SIRR_MASTER_API_KEY=<key> npm run test:integration
  */
 
 import { type ChildProcess, spawn } from 'node:child_process';
@@ -74,7 +74,7 @@ async function waitForHealth(retries = 40): Promise<void> {
 
 beforeAll(async () => {
   const externalServer = process.env['SIRR_SERVER'];
-  const externalKey    = process.env['SIRR_API_KEY'];
+  const externalKey    = process.env['SIRR_MASTER_API_KEY'];
 
   if (externalServer && externalKey) {
     // Use an already-running server
@@ -88,7 +88,7 @@ beforeAll(async () => {
   sirrd = spawn('sirrd', ['serve', '--port', String(PORT)], {
     env: {
       ...process.env,
-      SIRR_API_KEY: MASTER_KEY,
+      SIRR_MASTER_API_KEY: MASTER_KEY,
       SIRR_LICENSE_KEY: LICENSE_KEY,
       SIRR_AUTOINIT: '1',
       SIRR_DATA_DIR: dataDir,

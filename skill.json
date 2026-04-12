@@ -2,7 +2,7 @@
   "name": "sirr",
   "displayName": "Sirr Secret Manager",
   "description": "Manage ephemeral secrets with Sirr — push, retrieve, and audit secrets through natural language.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "triggers": {
     "keywords": [
       "secret",
@@ -24,11 +24,6 @@
       "type": "string",
       "description": "Bearer token (master key or scoped API key)",
       "secret": true
-    },
-    "org": {
-      "type": "string",
-      "description": "Organization slug for multi-tenant mode (optional)",
-      "required": false
     }
   }
 }
