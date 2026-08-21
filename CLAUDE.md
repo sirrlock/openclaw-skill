@@ -83,3 +83,15 @@ routed to org-scoped equivalents (`/orgs/{org_id}/...`) when `config.org` is set
 | `createRole` | POST | `/orgs/:orgId/roles` |
 | `listRoles` | GET | `/orgs/:orgId/roles` |
 | `deleteRole` | DELETE | `/orgs/:orgId/roles/:name` |
+
+## Commit Attribution
+
+**Never attribute commits to Claude, Anthropic, or any AI assistant.** This applies to every
+commit in this repo, with no exceptions:
+
+- Do **not** add `Co-Authored-By: Claude` (or any AI/assistant) trailers.
+- Do **not** add "Generated with Claude Code", robot badges, or `claude.ai/code` session links.
+- Do **not** set the commit author or committer to Claude/Anthropic — commits are authored by
+  the human maintainer only.
+
+Commit messages describe the change, nothing else. No AI attribution in any form.
